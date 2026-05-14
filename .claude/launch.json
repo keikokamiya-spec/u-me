@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "u-me",
+      "runtimeExecutable": "/opt/homebrew/bin/node",
+      "runtimeArgs": ["/tmp/ume-preview/server.mjs"],
+      "port": 3457,
+      "autoPort": true
+    }
+  ]
+}
