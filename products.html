@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全商品一覧｜u/me（ユーミー）プライベートネイルサロン</title>
+  <meta name="description" content="u/me のネイルメニュー全7商品。シンプルなワンカラーからオーダーアート、フットネイル、ブライダル、キャラクターネイルまで、あなたの希望に合わせたメニューをご紹介します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="header-logo">
+          <img src="rogo.PNG" alt="u/me ユーミー">
+        </a>
+        <a href="https://line.me/R/ti/p/@vbb1760o?ts=03311916&oat_content=url" target="_blank" class="header-line-btn">LINE予約</a>
+      </div>
+      <button class="gnav-btn" id="gnavBtn" aria-label="メニューを開く">
+        <span class="gnav-btn-line"></span>
+        <span class="gnav-btn-line"></span>
+        <span class="gnav-btn-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== GNAV ========== -->
+  <nav class="gnav" id="gnav">
+    <div class="gnav-inner">
+      <button class="gnav-close" id="gnavClose" aria-label="メニューを閉じる">
+        <span></span><span></span>
+      </button>
+
+      <ul class="gnav-links">
+        <li><a href="index.html#concept" class="gnav-link">
+          <span class="gnav-link-en">Concept</span>
+          <span class="gnav-link-ja">コンセプト</span>
+        </a></li>
+        <li><a href="index.html#gallery" class="gnav-link">
+          <span class="gnav-link-en">Gallery</span>
+          <span class="gnav-link-ja">ネイルスタイル</span>
+        </a></li>
+        <li><a href="index.html#menu" class="gnav-link">
+          <span class="gnav-link-en">Menu</span>
+          <span class="gnav-link-ja">メニュー・料金</span>
+        </a></li>
+        <li><a href="products.html" class="gnav-link">
+          <span class="gnav-link-en">Products</span>
+          <span class="gnav-link-ja">商品一覧</span>
+        </a></li>
+        <li><a href="index.html#salon" class="gnav-link">
+          <span class="gnav-link-en">Salon</span>
+          <span class="gnav-link-ja">サロンについて</span>
+        </a></li>
+        <li><a href="index.html#access" class="gnav-link">
+          <span class="gnav-link-en">Access</span>
+          <span class="gnav-link-ja">アクセス</span>
+        </a></li>
+      </ul>
+
+      <a href="https://line.me/R/ti/p/@vbb1760o?ts=03311916&oat_content=url" target="_blank" class="gnav-reserve-btn">
+        <span class="gnav-reserve-en">Reservation</span>
+        <span class="gnav-reserve-ja">LINEでご予約</span>
+      </a>
+
+      <ul class="gnav-sns">
+        <li><a href="https://www.instagram.com/u.me_nails/" target="_blank" class="gnav-sns-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>@u.me_nails</span>
+        </a></li>
+        <li><a href="https://line.me/R/ti/p/@vbb1760o?ts=03311916&oat_content=url" target="_blank" class="gnav-sns-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          <span>LINE予約</span>
+        </a></li>
+      </ul>
+
+    </div>
+  </nav>
+  <div class="gnav-overlay" id="gnavOverlay"></div>
+
+  <!-- ========== FIXED RESERVATION BUTTON ========== -->
+  <a href="https://line.me/R/ti/p/@vbb1760o?ts=03311916&oat_content=url" target="_blank" class="fixed-reserve-btn" id="fixedReserveBtn">LINE<br>予約</a>
+
+  <main>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header" style="background-image: url('ネイル/IMG_1529.JPG')">
+      <div class="page-header-overlay"></div>
+      <div class="page-header-content">
+        <h1 class="page-title">全商品一覧</h1>
+        <p class="page-subtitle">Our Products</p>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCTS ========== -->
+    <section class="products-section" id="products">
+      <div class="section-header fade-in">
+        <p class="section-en">Products</p>
+        <h2 class="section-title">全7つの商品</h2>
+        <p class="section-subtitle">あなたの希望に合わせた、特別なメニューをご用意しています。</p>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="products-grid">
+
+        <!-- Product 1 -->
+        <article class="product-card fade-in" data-product="1">
+          <div class="product-image">
+            <img src="ネイル/IMG_1529.JPG" alt="ワンカラー・グラデーション">
+          </div>
+          <div class="product-body">
+            <p class="product-number">01</p>
+            <h3 class="product-title">ワンカラー・グラデーション</h3>
+            <p class="product-category">Simple</p>
+            <p class="product-desc">シンプルで上質な仕上がり。毎日の気分や季節に合わせて、色を選ぶ喜びを。シンプルなからこそ、爪の健康と輝きが引き立ちます。</p>
+            <div class="product-info">
+              <div class="product-info-item">
+                <span class="product-info-label">時間</span>
+                <span class="product-info-value">60分〜</span>
+              </div>
+              <div class="product-info-item">
+                <span class="product-info-label">料金</span>
+                <span class="product-info-value">¥6,000〜</span>
+              </div>
+            </div>
+            <div class="product-features">
+              <p class="product-features-label">特徴</p>
+              <ul class="product-features-list">
+                <li>豊富なカラーから選択可能</li>
+                <li>オフ・ジェル代込み</li>
+                <li>リーズナブルな価格</li>
+                <li>初心者さんにもおすすめ</li>
+              </ul>
+            </div>
+            <a href="#reserve" class="product-btn">予約する</a>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card fade-in" data-product="2">
+          <div class="product-image">
+            <img src="ネイル/IMG_1533.JPG" alt="シンプルアート">
+          </div>
+          <div class="product-body">
+            <p class="product-number">02</p>
+            <h3 class="product-title">シンプルアート</h3>
+            <p class="product-category">Art</p>
+            <p class="product-desc">さりげないデザインで、上品さをプラス。ラインやドット、ニュアンスなど、シンプルながら洗練されたアートを。毎日使いたくなるデザイン。</p>
+            <div class="product-info">
+              <div class="product-info-item">
+                <span class="product-info-label">時間</span>
+                <span class="product-info-value">90分</span>
+              </div>
+              <div class="product-info-item">
+                <span class="product-info-label">料金</span>
+                <span class="product-info-value">¥9,500</span>
+              </div>
+            </div>
+            <div class="product-features">
+              <p class="product-features-label">特徴</p>
+              <ul class="product-features-list">
+                <li>洗練されたデザイン</li>
+                <li>丁寧なカウンセリング</li>
+                <li>持ち込みデザイン対応</li>
+                <li>ビジネスマナーOK</li>
+              </ul>
+            </div>
+            <a href="#reserve" class="product-btn">予約する</a>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card fade-in" data-product="3">
+          <div class="product-image">
+            <img src="ネイル/IMG_1535.JPG" alt="デザインアート スタンダード">
+          </div>
+          <div class="product-body">
+            <p class="product-number">03</p>
+            <h3 class="product-title">デザインアート スタンダード</h3>
+            <p class="product-category">Art</p>
+            <p class="product-desc">こだわりが詰まった本格的なアート。複数の技法を組み合わせた、豪華で繊細なデザインをあなたの指先に。特別な日をより特別に。</p>
+            <div class="product-info">
+              <div class="product-info-item">
+                <span class="product-info-label">時間</span>
+                <span class="product-info-value">120分</span>
+              </div>
+              <div class="product-info-item">
+                <span class="product-info-label">料金</span>
+                <span class="product-info-value">¥12,000</span>
+              </div>
+            </div>
+            <div class="product-features">
+              <p class="product-features-label">特徴</p>
+              <ul class="product-features-list">
+                <li>複数の装飾技法使用</li>
+                <li>3Dパーツ対応</li>
+                <li>持ち込みデザイン対応</li>
+                <li>こだわりの仕上げ</li>
+              </ul>
+            </div>
+            <a href="#reserve" class="product-btn">予約する</a>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card fade-in" data-product="4">
+          <div class="product-image">
+            <img src="ネイル/IMG_1537.JPG" alt="デザインアート プレミアム">
+          </div>
+          <div class="product-body">
+            <p class="product-number">04</p>
+            <h3 class="product-title">デザインアート プレミアム</h3>
+            <p class="product-category">Art</p>
+            <p class="product-desc">最高級のアート体験。細部までこだわった最高峰のデザイン。痛ネイルや立体的な装飾など、あなたのあらゆる想像を現実に。</p>
+            <div class="product-info">
+              <div class="product-info-item">
+                <span class="product-info-label">時間</span>
+                <span class="product-info-value">150分</span>
+              </div>
+              <div class="product-info-item">
+                <span class="product-info-label">料金</span>
+                <span class="product-info-value">¥16,000</span>
+              </div>
+            </div>
+            <div class="product-features">
+              <p class="product-features-label">特徴</p>
+              <ul class="product-features-list">
+                <li>豪華で複雑なデザイン対応</li>
+                <li>3D・立体パーツ豊富</li>
+                <li>痛ネイル対応</li>
+                <li>完全カスタムメイド</li>
+              </ul>
+            </div>
+            <a href="#reserve" class="product-btn">予約する</a>
+          </div>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product-card fade-in" data-product="5">
+          <div class="product-image">
+            <img src="ネイル/IMG_1539.JPG" alt="親指ニュアンス定額">
+          </div>
+          <div class="product-body">
+            <p class="product-number">05</p>
+            <h3 class="product-title">親指ニュアンス定額</h3>
+            <p class="product-category">Foot</p>
+            <p class="product-desc">足の爪も美しく。大人っぽいニュアンスカラーで、サンダルの季節も自信満々。フィルインで爪への負担を最小限に。</p>
+            <div class="product-info">
+              <div class="product-info-item">
+                <span class="product-info-label">時間</span>
+                <span class="product-info-value">90分〜</span>
+              </div>
+              <div class="product-info-item">
+                <span class="product-info-label">料金</span>
+                <span class="product-info-value">¥8,800</span>
+              </div>
+            </div>
+            <div class="product-features">
+              <p class="product-features-label">特徴</p>
+              <ul class="product-features-list">
+                <li>足爪専用ニュアンス</li>
+                <li>フィルイン対応</li>
+                <li>爪への負担が少ない</li>
+                <li>毎月のお手入れにおすすめ</li>
+              </ul>
+            </div>
+            <a href="#reserve" class="product-btn">予約する</a>
+          </div>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="product-card fade-in" data-product="6">
+          <div class="product-image">
+            <img src="ネイル/IMG_1541.JPG" alt="ブライダルネイル">
+          </div>
+          <div class="product-body">
+            <p class="product-number">06</p>
+            <h3 class="product-title">ブライダルネイル</h3>
+            <p class="product-category">Special</p>
+            <p class="product-desc">人生で最も特別な日に。ウェディングドレスや帯に合わせた、究極のおもてなしネイル。花嫁様の美しさをさらに引き立たせます。</p>
+            <div class="product-info">
+              <div class="product-info-item">
+                <span class="product-info-label">時間</span>
+                <span class="product-info-value">180分</span>
+              </div>
+              <div class="product-info-item">
+                <span class="product-info-label">料金</span>
+                <span class="product-info-value">¥20,000〜</span>
+              </div>
+            </div>
+            <div class="product-features">
+              <p class="product-features-label">特徴</p>
+              <ul class="product-features-list">
+                <li>ウェディングコーディネート</li>
+                <li>手・足セット可能</li>
+                <li>事前相談・打ち合わせ</li>
+                <li>当日最高の輝きをキープ</li>
+              </ul>
+            </div>
+            <a href="#reserve" class="product-btn">予約する</a>
+          </div>
+        </article>
+
+        <!-- Product 7 -->
+        <article class="product-card fade-in" data-product="7">
+          <div class="product-image">
+            <img src="ネイル/IMG_1543.JPG" alt="キャラクターネイル">
+          </div>
+          <div class="product-body">
+            <p class="product-number">07</p>
+            <h3 class="product-title">キャラクターネイル</h3>
+            <p class="product-category">Special</p>
+            <p class="product-desc">推し活をもっと楽しく。好きなキャラクターやゲーム、アニメを指先に。推し活仲間との会話も弾みます。あなたの「好き」を表現。</p>
+            <div class="product-info">
+              <div class="product-info-item">
+                <span class="product-info-label">時間</span>
+                <span class="product-info-value">120分〜</span>
+              </div>
+              <div class="product-info-item">
+                <span class="product-info-label">料金</span>
+                <span class="product-info-value">¥13,000〜</span>
+              </div>
+            </div>
+            <div class="product-features">
+              <p class="product-features-label">特徴</p>
+              <ul class="product-features-list">
+                <li>推し活応援ネイル</li>
+                <li>キャラクター描写対応</li>
+                <li>持ち込み画像OK</li>
+                <li>推し活仲間の共有に</li>
+              </ul>
+            </div>
+            <a href="#reserve" class="product-btn">予約する</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Product Comparison -->
+      <div class="products-comparison fade-in">
+        <h3 class="comparison-title">商品比較表</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>商品名</th>
+                <th>分類</th>
+                <th>時間</th>
+                <th>料金</th>
+                <th>特徴</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="product-name">ワンカラー・グラデーション</td>
+                <td>Simple</td>
+                <td>60分〜</td>
+                <td>¥6,000〜</td>
+                <td>シンプル・リーズナブル</td>
+              </tr>
+              <tr>
+                <td class="product-name">シンプルアート</td>
+                <td>Art</td>
+                <td>90分</td>
+                <td>¥9,500</td>
+                <td>上品・毎日使い</td>
+              </tr>
+              <tr>
+                <td class="product-name">デザインアート スタンダード</td>
+                <td>Art</td>
+                <td>120分</td>
+                <td>¥12,000</td>
+                <td>豪華・本格的</td>
+              </tr>
+              <tr>
+                <td class="product-name">デザインアート プレミアム</td>
+                <td>Art</td>
+                <td>150分</td>
+                <td>¥16,000</td>
+                <td>最高級・立体的</td>
+              </tr>
+              <tr>
+                <td class="product-name">親指ニュアンス定額</td>
+                <td>Foot</td>
+                <td>90分〜</td>
+                <td>¥8,800</td>
+                <td>フット・負担少ない</td>
+              </tr>
+              <tr class="highlight">
+                <td class="product-name">ブライダルネイル</td>
+                <td>Special</td>
+                <td>180分</td>
+                <td>¥20,000〜</td>
+                <td>特別な日・ウェディング</td>
+              </tr>
+              <tr class="highlight">
+                <td class="product-name">キャラクターネイル</td>
+                <td>Special</td>
+                <td>120分〜</td>
+                <td>¥13,000〜</td>
+                <td>推し活・カスタム</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== RESERVATION CTA ========== -->
+    <section class="reserve-cta fade-in" id="reserve">
+      <div class="reserve-cta-inner">
+        <h2 class="reserve-cta-title">気になる商品はありましたか？</h2>
+        <p class="reserve-cta-text">ご質問やご不明な点は、お気軽にお問い合わせください。<br>LINEでの丁寧なカウンセリングも承っています。</p>
+        <div class="reserve-cta-buttons">
+          <a href="https://line.me/R/ti/p/@vbb1760o?ts=03311916&oat_content=url" target="_blank" class="btn-primary">LINEでご予約・ご相談</a>
+          <a href="index.html#access" class="btn-outline">アクセス・営業時間を見る</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="rogo.PNG" alt="u/me ユーミー">
+      </div>
+      <p class="footer-tagline">爪からはじまる、幸せ。</p>
+      <ul class="footer-sns">
+        <li><a href="https://www.instagram.com/u.me_nails/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          Instagram
+        </a></li>
+        <li><a href="https://line.me/R/ti/p/@vbb1760o?ts=03311916&oat_content=url" target="_blank">LINE予約</a></li>
+      </ul>
+      <p class="footer-address">〒221-0834 神奈川県横浜市神奈川区台町16-1 ソレイユ台町607</p>
+      <p class="footer-copy">©2023 u/me nail salon</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
