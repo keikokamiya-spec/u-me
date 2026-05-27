@@ -644,13 +644,26 @@ section { padding: 100px 0; }
   color: var(--dark);
   margin-bottom: 18px;
 }
+.concept-profile {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
 .concept-owner-img {
-  margin-bottom: 28px;
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0;
 }
 .concept-owner-img img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/4;
   object-fit: cover;
+}
+.concept-profile-body {
+  grid-column: 2;
+  grid-row: 1;
 }
 .concept-history {
   padding: 26px 28px;
@@ -1131,6 +1144,7 @@ section { padding: 100px 0; }
   .concept-message,
   .concept-profile {
     position: relative;
+    display: block;
     overflow: hidden;
     padding: 32px 24px;
     border-bottom: 0;
