@@ -69,6 +69,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+  // ── Mobile gallery slideshow ──────────────────
+  const galleryGrid = document.querySelector('.gallery-grid');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const mobileQuery = window.matchMedia('(max-width: 767px)');
+  const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let galleryCurrent = 0;
+  let galleryTimer = null;
+
+  const showGallerySlide = index => {
+    if (!galleryGrid || !galleryItems.length) return;
+    galleryCurrent = (index + galleryItems.length) % galleryItems.length;
+    galleryGrid.scrollTo({
+      left: galleryGrid.clientWidth * galleryCurrent,
+      behavior: reduceMotionQuery.matches ? 'auto' : 'smooth'
+    });
+  };
+
+  const startGallerySlideshow = () => {
+    if (!galleryGrid || !mobileQuery.matches || reduceMotionQuery.matches) return;
+    if (galleryTimer) return;
+    galleryTimer = setInterval(() => {
+      showGallerySlide(galleryCurrent + 1);
+    }, 3600);
+  };
+
+  const stopGallerySlideshow = () => {
+    if (!galleryTimer) return;
+    clearInterval(galleryTimer);
+    galleryTimer = null;
+  };
+
+  const updateGallerySlideshow = () => {
+    if (!galleryGrid) return;
+    if (mobileQuery.matches) {
+      showGallerySlide(galleryCurrent);
+      if (reduceMotionQuery.matches) {
+        stopGallerySlideshow();
+      } else {
+        startGallerySlideshow();
+      }
+    } else {
+      stopGallerySlideshow();
+      galleryGrid.scrollTo({ left: 0, behavior: 'auto' });
+      galleryCurrent = 0;
+    }
+  };
+
+  updateGallerySlideshow();
+  mobileQuery.addEventListener('change', updateGallerySlideshow);
+  reduceMotionQuery.addEventListener('change', updateGallerySlideshow);
+
   // ── Smooth scroll ──────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
