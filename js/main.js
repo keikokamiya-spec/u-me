@@ -46,11 +46,51 @@ document.addEventListener('DOMContentLoaded', () => {
   let current = 0;
 
   const tick = () => {
+    if (!slides.length) return;
     slides[current].classList.remove('active');
     current = (current + 1) % slides.length;
     slides[current].classList.add('active');
   };
-  setInterval(tick, 5000);
+  if (slides.length) {
+    setInterval(tick, 5000);
+  }
+
+  // ── Concept accordion ─────────────────────────
+  document.querySelectorAll('.concept-catch-toggle').forEach(button => {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    if (!panel) return;
+
+    button.addEventListener('click', () => {
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isOpen));
+      button.classList.toggle('is-open', !isOpen);
+      panel.hidden = isOpen;
+    });
+  });
+
+  document.querySelectorAll('.concept-service-toggle').forEach(button => {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    if (!panel) return;
+
+    button.addEventListener('click', () => {
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isOpen));
+      button.classList.toggle('is-open', !isOpen);
+      panel.hidden = isOpen;
+    });
+  });
+
+  document.querySelectorAll('.concept-profile-toggle').forEach(button => {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    if (!panel) return;
+
+    button.addEventListener('click', () => {
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isOpen));
+      button.classList.toggle('is-open', !isOpen);
+      panel.hidden = isOpen;
+    });
+  });
 
   // ── Scroll animation ───────────────────────────
   const observer = new IntersectionObserver((entries) => {
