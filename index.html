@@ -149,7 +149,7 @@
       <div class="concept-inner">
         <div class="concept-body fade-in">
           <p class="concept-script">u &amp; me</p>
-          <button class="concept-catch concept-catch-toggle" type="button" aria-expanded="false" aria-controls="conceptMessage">爪からはじまる、幸せ。</button>
+          <button class="concept-catch concept-catch-toggle" type="button" aria-expanded="false" aria-controls="conceptMessage">爪からはじまる、幸せ。<span class="toggle-detail-label">詳細</span></button>
 
           <div class="concept-block concept-message" id="conceptMessage" hidden>
             <h3 class="concept-block-title">コンセプト</h3>
@@ -171,7 +171,7 @@
           </div>
 
           <div class="concept-block concept-service">
-            <button class="concept-block-title concept-service-toggle" type="button" aria-expanded="false" aria-controls="conceptService">事業・サービス概要</button>
+            <button class="concept-block-title concept-service-toggle" type="button" aria-expanded="false" aria-controls="conceptService">事業・サービス概要<span class="toggle-detail-label">詳細</span></button>
             <div id="conceptService" hidden>
               <p class="concept-text">u/me（ユーミー）は、横浜にあるプライベートネイルサロンです。お客様一人ひとりに寄り添ったカウンセリングを大切にし、似合うカラーやデザインをご提案するオーダーメイドネイルをご提供しております。</p>
               <p class="concept-text">シンプルなデザインからこだわりのアート、3Dパーツ制作まで幅広く対応し、日常にときめきをプラスする「ご褒美ネイル」をお届けいたします。</p>
@@ -196,7 +196,7 @@
               <img src="内装/line_oa_chat_240202_210448.JPG" alt="ネイリスト 梅原みのり">
             </div>
             <div class="concept-profile-body">
-              <button class="concept-block-title concept-profile-toggle" type="button" aria-expanded="false" aria-controls="conceptProfile">代表者紹介</button>
+              <button class="concept-block-title concept-profile-toggle" type="button" aria-expanded="false" aria-controls="conceptProfile">代表者紹介<span class="toggle-detail-label">詳細</span></button>
               <p class="concept-owner">u/me（ユーミー）代表<br>ネイリスト　梅原みのり</p>
               <div id="conceptProfile" hidden>
                 <p class="concept-text">服飾専門学校を卒業後、アパレル業界や美容室での勤務を経て、ネイル業界へ転身。横浜にて2店舗のネイルサロンで経験を積み、u/meをオープンいたしました。</p>
@@ -343,20 +343,22 @@
       </div>
 
       <div class="menu-options fade-in">
-        <h3 class="menu-options-title">こだわりポイント</h3>
-        <div class="menu-options-copy">
-          <p>お客様一人ひとりに寄り添い、<br>似合うカラーやデザインをご提案する<br>オーダーメイドネイルをご提供しております。</p>
-          <p>手描きアートや繊細なデザインにも対応しており、<br>お客様の「好き」や「こだわり」を<br>形にすることを得意としています。</p>
-          <p>デザインの可愛さだけでなく、<br>丁寧な施術とモチの良さにもこだわり、<br>日常の中でふとお手元を見たときに、<br>ときめきや癒しを感じていただけるネイルを<br>お届けいたします。</p>
+        <button class="menu-options-title menu-options-toggle" type="button" aria-expanded="false" aria-controls="menuOptionsDetail">こだわりポイント<span class="toggle-detail-label">詳細</span></button>
+        <div id="menuOptionsDetail" hidden>
+          <div class="menu-options-copy">
+            <p>お客様一人ひとりに寄り添い、<br>似合うカラーやデザインをご提案する<br>オーダーメイドネイルをご提供しております。</p>
+            <p>手描きアートや繊細なデザインにも対応しており、<br>お客様の「好き」や「こだわり」を<br>形にすることを得意としています。</p>
+            <p>デザインの可愛さだけでなく、<br>丁寧な施術とモチの良さにもこだわり、<br>日常の中でふとお手元を見たときに、<br>ときめきや癒しを感じていただけるネイルを<br>お届けいたします。</p>
+          </div>
+          <ul class="menu-options-list">
+            <li>✦ 持ち込みデザインOK</li>
+            <li>✦ 3Dパーツ・痛ネイル対応</li>
+            <li>✦ フィルイン対応</li>
+            <li>✦ ドリンクサービスあり</li>
+            <li>✦ お子さま同伴可</li>
+            <li>✦ カード・QRコード決済対応</li>
+          </ul>
         </div>
-        <ul class="menu-options-list">
-          <li>✦ 持ち込みデザインOK</li>
-          <li>✦ 3Dパーツ・痛ネイル対応</li>
-          <li>✦ フィルイン対応</li>
-          <li>✦ ドリンクサービスあり</li>
-          <li>✦ お子さま同伴可</li>
-          <li>✦ カード・QRコード決済対応</li>
-        </ul>
       </div>
 
       <div class="menu-payment fade-in">
@@ -417,8 +419,8 @@
           <div class="access-block">
             <h3 class="access-block-title">アクセス方法</h3>
             <p class="access-station">横浜駅徒歩8分<br><small>ジョイナス【南12】出口から徒歩3分</small></p>
-            <p class="access-route-title">地下街を通るルート案内</p>
-            <ol class="access-steps">
+            <button class="access-route-title access-route-toggle" type="button" aria-expanded="false" aria-controls="accessRouteSteps">地下街を通るルート案内<span class="toggle-detail-label">詳細</span></button>
+            <ol class="access-steps" id="accessRouteSteps" hidden>
               <li>横浜駅西口（中央）から、NEWoMan・CIAL・ジョイナス（旧ダイヤモンド地下街）方面へお進みください。<small>JR横浜駅はB1フロアに位置しますので、階段の上り下りはせず、そのままB1フロアをお進みください。</small></li>
               <li>ジョイナスB1フロアのマツモトキヨシや無印良品がある通りを、突き当たりまで直進します。<small>ヨドバシカメラを過ぎ、3COINSやスターバックスを通過し、「整体×骨盤 カ･ラ･ダ ファクトリー」が見えましたら、地下街最南端【南12】出口から地上へお上がりください。</small></li>
               <li>地上に出ましたら左方向へ進み、架橋を越えて鶴屋町歩道橋を「反町方面」へ直進します。<small>下り階段が2つありますが、奥側の階段をご利用ください。</small></li>
