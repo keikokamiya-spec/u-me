@@ -55,6 +55,47 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(tick, 5000);
   }
 
+  // ── note latest post ──────────────────────────
+  const noteTitle = document.getElementById('noteLatestTitle');
+  const noteText = document.getElementById('noteLatestText');
+  const noteLink = document.getElementById('noteLatestLink');
+
+  const formatNoteDate = value => {
+    if (!value) return '';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return '';
+    return date.toLocaleDateString('ja-JP', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  };
+
+  const loadLatestNote = async () => {
+    if (!noteTitle || !noteText || !noteLink) return;
+
+    try {
+      const response = await fetch('/api/note', { headers: { 'Accept': 'application/json' } });
+      if (!response.ok) throw new Error('note feed unavailable');
+
+      const data = await response.json();
+      if (!data.item) {
+        noteLink.href = data.profileUrl || 'https://note.com/ume_nails';
+        return;
+      }
+
+      const date = formatNoteDate(data.item.date);
+      noteTitle.textContent = data.item.title || noteTitle.textContent;
+      noteText.textContent = [date, data.item.description].filter(Boolean).join('　');
+      noteLink.href = data.item.link || data.profileUrl || 'https://note.com/ume_nails';
+      noteLink.textContent = '最新noteを読む';
+    } catch (error) {
+      noteLink.href = 'https://note.com/ume_nails';
+    }
+  };
+
+  loadLatestNote();
+
   // ── Concept accordion ─────────────────────────
   document.querySelectorAll('.concept-catch-toggle').forEach(button => {
     const panel = document.getElementById(button.getAttribute('aria-controls'));
@@ -114,6 +155,37 @@ document.addEventListener('DOMContentLoaded', () => {
       button.classList.toggle('is-open', !isOpen);
       panel.hidden = isOpen;
     });
+  });
+
+  // ── Menu manual slideshow ─────────────────────
+  document.querySelectorAll('[data-menu-slider]').forEach(slider => {
+    const track = slider.querySelector('.menu-cards');
+    const cards = Array.from(slider.querySelectorAll('.menu-card'));
+    const prevButton = slider.querySelector('[data-menu-prev]');
+    const nextButton = slider.querySelector('[data-menu-next]');
+    const status = slider.querySelector('[data-menu-status]');
+    let currentIndex = 0;
+
+    if (!track || !cards.length || !prevButton || !nextButton || !status) return;
+
+    const updateControls = () => {
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex === cards.length - 1;
+      status.textContent = `${currentIndex + 1} / ${cards.length}`;
+    };
+
+    const showMenuSlide = index => {
+      currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+      const left = cards[currentIndex].offsetLeft - track.offsetLeft;
+      track.scrollTo({ left, behavior: 'smooth' });
+      updateControls();
+    };
+
+    prevButton.addEventListener('click', () => showMenuSlide(currentIndex - 1));
+    nextButton.addEventListener('click', () => showMenuSlide(currentIndex + 1));
+
+    window.addEventListener('resize', () => showMenuSlide(currentIndex));
+    updateControls();
   });
 
   // ── Scroll animation ───────────────────────────
