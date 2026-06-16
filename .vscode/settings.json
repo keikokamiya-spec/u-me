@@ -1,3 +1,14 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "workbench.editorAssociations": {
+        "*.png": "imagePreview.previewEditor",
+        "*.PNG": "imagePreview.previewEditor",
+        "*.jpg": "imagePreview.previewEditor",
+        "*.JPG": "imagePreview.previewEditor",
+        "*.jpeg": "imagePreview.previewEditor",
+        "*.JPEG": "imagePreview.previewEditor",
+        "*.gif": "imagePreview.previewEditor",
+        "*.webp": "imagePreview.previewEditor",
+        "*.bmp": "imagePreview.previewEditor"
+    }
 }

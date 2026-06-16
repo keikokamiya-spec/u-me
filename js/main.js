@@ -4,12 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Header scroll ──────────────────────────────
   const header       = document.getElementById('header');
-  const fixedBtn     = document.getElementById('fixedReserveBtn');
 
   const onScroll = () => {
     const scrolled = window.scrollY > 60;
     header.classList.toggle('is-scrolled', scrolled);
-    fixedBtn.classList.toggle('is-visible', scrolled);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
