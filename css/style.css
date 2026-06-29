@@ -2390,11 +2390,65 @@ section { padding: 100px 0; }
   .menu { padding: 56px 14px; }
   .profile-section,
   .instagram-section {
-    padding: 72px 20px;
+    padding: 56px 14px;
+  }
+  .profile-section .section-header {
+    margin-bottom: 24px;
+    padding: 0 8px;
+  }
+  .profile-section .section-en {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 6px;
+  }
+  .profile-section .section-title {
+    font-size: 1.16rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .profile-section .section-line {
+    width: 28px;
   }
   .profile-panel,
   .instagram-panel {
-    padding: 24px 20px;
+    padding: 18px 14px;
+  }
+  .profile-panel {
+    grid-template-columns: 108px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+  .profile-panel-image img {
+    aspect-ratio: 1 / 1.18;
+  }
+  .profile-panel-body .menu-card-en {
+    font-size: 0.64rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 4px;
+  }
+  .profile-panel-title {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+  .profile-panel .concept-text {
+    font-size: 0.72rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .profile-panel-body .concept-block-title {
+    margin-top: 10px;
+  }
+  .profile-panel .concept-profile-toggle {
+    gap: 8px;
+    padding: 10px 8px 12px;
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+  .profile-panel .toggle-detail-label {
+    padding: 5px 9px;
+    font-size: 0.54rem;
   }
   .instagram-panel .gallery-links {
     justify-content: flex-start;
@@ -2568,6 +2622,26 @@ section { padding: 100px 0; }
   .menu-options-title {
     font-size: 0.74rem;
     line-height: 1.55;
+  }
+  .profile-panel {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 10px;
+    padding: 16px 12px;
+  }
+  .profile-panel-title {
+    font-size: 0.8rem;
+  }
+  .profile-panel .concept-text {
+    font-size: 0.68rem;
+    line-height: 1.55;
+  }
+  .profile-panel .concept-profile-toggle {
+    font-size: 0.68rem;
+    padding: 9px 7px 10px;
+  }
+  .profile-panel .toggle-detail-label {
+    padding: 4px 8px;
+    font-size: 0.5rem;
   }
   .concept-catch-text {
     font-size: 0.98em;
