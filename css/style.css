@@ -1038,9 +1038,15 @@ section { padding: 100px 0; }
 
 .profile-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 28px;
   align-items: start;
+}
+
+.profile-panel-image img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
 }
 
 .profile-panel-title {
@@ -1072,6 +1078,17 @@ section { padding: 100px 0; }
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+}
+
+.instagram-grid-single {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.instagram-grid-single img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: var(--white);
 }
 
 .instagram-panel .gallery-links {
@@ -1934,6 +1951,7 @@ section { padding: 100px 0; }
   .concept-side { gap: 44px; }
   .profile-panel {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .strength-specialties {
     grid-template-columns: 1fr;
@@ -2407,7 +2425,7 @@ section { padding: 100px 0; }
   }
   .profile-panel {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0;
+    gap: 14px;
     align-items: start;
   }
   .profile-panel-body .menu-card-en {
@@ -2614,7 +2632,7 @@ section { padding: 100px 0; }
   }
   .profile-panel {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0;
+    gap: 12px;
     padding: 16px 12px;
   }
   .profile-panel-title {
