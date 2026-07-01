@@ -430,12 +430,12 @@ section { padding: 100px 0; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, rgba(50,38,43,0.36) 0%, rgba(50,38,43,0.22) 34%, rgba(50,38,43,0) 66%),
+    radial-gradient(ellipse at center, rgba(255,255,255,0.22) 0%, rgba(245,213,220,0.16) 34%, rgba(255,255,255,0) 66%),
     linear-gradient(
       160deg,
-      rgba(92,74,80,0.18) 0%,
-      rgba(92,74,80,0.42) 50%,
-      rgba(92,74,80,0.68) 100%
+      rgba(255,250,251,0.16) 0%,
+      rgba(232,160,176,0.16) 52%,
+      rgba(92,74,80,0.32) 100%
     );
 }
 
@@ -1038,15 +1038,9 @@ section { padding: 100px 0; }
 
 .profile-panel {
   display: grid;
-  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   align-items: start;
-}
-
-.profile-panel-image img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
 }
 
 .profile-panel-title {
@@ -2357,9 +2351,7 @@ section { padding: 100px 0; }
       url('../ネイル/IMG_1547.JPG');
   }
   .concept-profile {
-    background-image:
-      linear-gradient(rgba(253,250,250,0.76), rgba(253,250,250,0.76)),
-      url('../内装/line_oa_chat_240202_210448.JPG');
+    background: var(--bg-soft);
   }
 
   /* Gallery */
@@ -2414,12 +2406,9 @@ section { padding: 100px 0; }
     padding: 18px 14px;
   }
   .profile-panel {
-    grid-template-columns: 108px minmax(0, 1fr);
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
     align-items: start;
-  }
-  .profile-panel-image img {
-    aspect-ratio: 1 / 1.18;
   }
   .profile-panel-body .menu-card-en {
     font-size: 0.64rem;
@@ -2624,8 +2613,8 @@ section { padding: 100px 0; }
     line-height: 1.55;
   }
   .profile-panel {
-    grid-template-columns: 92px minmax(0, 1fr);
-    gap: 10px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
     padding: 16px 12px;
   }
   .profile-panel-title {
